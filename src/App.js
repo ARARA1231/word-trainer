@@ -2,26 +2,22 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  // Состояние для хранения списка слов
   const [words, setWords] = useState([
     { id: 1, original: 'Hello', translation: 'Привет' },
     { id: 2, original: 'World', translation: 'Мир' },
   ]);
 
-  // Состояние для новых слов (оригинал и перевод)
   const [newOriginal, setNewOriginal] = useState('');
   const [newTranslation, setNewTranslation] = useState('');
 
-  // Состояние для режима тренировки
   const [isTraining, setIsTraining] = useState(false);
   const [currentWordIndex, setCurrentWordIndex] = useState(null);
   const [showTranslation, setShowTranslation] = useState(false);
 
-  // Функция для добавления нового слова
   const addWord = () => {
     if (newOriginal.trim() && newTranslation.trim()) {
       const newWord = {
-        id: Date.now(), // Простой способ получить уникальный ID
+        id: Date.now(), 
         original: newOriginal,
         translation: newTranslation,
       };
@@ -31,7 +27,6 @@ function App() {
     }
   };
 
-  // Функция для начала тренировки
   const startTraining = () => {
     if (words.length === 0) {
       alert('Добавьте слова для тренировки!');
@@ -42,7 +37,6 @@ function App() {
     setShowTranslation(false);
   };
 
-  // Функция для показа следующего слова в тренировке
   const nextWord = () => {
     setCurrentWordIndex(Math.floor(Math.random() * words.length));
     setShowTranslation(false);
@@ -53,7 +47,7 @@ function App() {
       <header className="App-header">
         <h1>Тренажер слов</h1>
 
-        {/* Если не в режиме тренировки, показываем список и форму добавления */}
+        {}
         {!isTraining ? (
           <>
             <div className="add-word-form">
@@ -89,7 +83,6 @@ function App() {
             </button>
           </>
         ) : (
-          /* Режим тренировки */
           <div className="training-mode">
             <h2>Тренировка</h2>
             {currentWordIndex !== null && (

@@ -19,7 +19,6 @@ h2 {
   font-size: 1.2em;
 }
 
-/* Стили для формы добавления слов */
 .add-word-form {
   margin: 20px auto;
   padding: 15px;
@@ -51,7 +50,6 @@ h2 {
   background-color: #0056b3;
 }
 
-/* Стили для списка слов */
 .word-list {
   margin: 20px auto;
   padding: 15px;
@@ -76,7 +74,6 @@ h2 {
   border-bottom: none;
 }
 
-/* Кнопка тренировки */
 .train-button {
   padding: 10px 20px;
   background-color: #28a745;
@@ -92,7 +89,6 @@ h2 {
   background-color: #218838;
 }
 
-/* Стили для режима тренировки */
 .training-mode {
   margin: 20px auto;
   max-width: 400px;
@@ -120,7 +116,6 @@ h2 {
   margin: 10px 0 0 0;
 }
 
-/* Кнопки в режиме тренировки */
 .training-buttons button {
   padding: 8px 16px;
   margin: 5px;
